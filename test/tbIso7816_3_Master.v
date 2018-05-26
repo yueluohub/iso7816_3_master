@@ -70,6 +70,9 @@ parameter CLK_PERIOD = 10;//should be %2
 wire isTxTerm;
 reg isoSioInTerm;
 wire isoSioOutTerm;
+
+wire txRun,txPending, rxRun, rxStartBit, isTx, overrunErrorFlag, frameErrorFlag, bufferFull;
+
 assign isoSioTerm = isTx ? isoSioOutTerm : 1'bz;
 pullup(isoSioTerm);
 always @(*) isoSioInTerm = isoSioTerm;
@@ -78,7 +81,7 @@ wire COM_statusOut=statusOut;
 wire COM_clk=isoClk;
 integer COM_errorCnt;
 
-wire txRun,txPending, rxRun, rxStartBit, isTx, overrunErrorFlag, frameErrorFlag, bufferFull;
+
 assign {txRun, txPending, rxRun, rxStartBit, isTx, overrunErrorFlag, frameErrorFlag, bufferFull} = statusOut;
 
 `include "ComDriverTasks.v"

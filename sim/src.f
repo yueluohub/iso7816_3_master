@@ -1,0 +1,9 @@
+../sources/ClkDivider.v
+../sources/Counter.v
+../sources/HalfDuplexUartIf.v
+../sources/Iso7816_3_Master.v
+../sources/RxCore.v
+../sources/RxCoreSelfContained.v
+../sources/RxCoreSpec.v
+../sources/TxCore.v
+../sources/Uart.v

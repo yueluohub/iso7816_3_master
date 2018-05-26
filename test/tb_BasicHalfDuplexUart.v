@@ -84,7 +84,7 @@ module tb_BasicHalfDuplexUart;
 		startTx = 0;
 		ackFlags = 0;
 		clk = 0;
-		reset = 0;
+		nReset = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
